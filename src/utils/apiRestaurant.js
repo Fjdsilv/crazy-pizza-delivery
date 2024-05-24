@@ -5,7 +5,9 @@ export const getMenu = async () => {
     const res = await fetch(`${API_URL}/menu`);
     // fetch doesn't treat client error(4xx) and server error(5xx) like error.
     // fetch won't throw error on 400 errors (e.g. when URL is wrong), so we need to do it manually. 
-    if (!res.ok) throw new Error("Failed getting menu");
+    if (!res.ok) {
+      throw new Error("Failed getting menu");
+    }
 
     const { data } = await res.json();
     return data;
@@ -14,7 +16,9 @@ export const getMenu = async () => {
 export const getOrder = async (id) => {
     const res = await fetch(`${API_URL}/order/${id}`);
     
-    if (!res.ok) throw new Error(`Couldn't find order #${id}`);
+    if (!res.ok) {
+      throw new Error(`Couldn't find order #${id}`);
+    }
     
     const { data } = await res.json();
     return data;
@@ -30,7 +34,10 @@ export const createOrder = async (newOrder) => {
       },
     });
 
-    if (!res.ok) throw new Error("Failed getting order");
+    if (!res.ok) {
+      throw new Error("Failed getting order");
+    }
+
     const { data } = await res.json();
     return data;
   } catch {
@@ -48,7 +55,9 @@ export const updateOrder = async (id, updateObj) => {
       },
     });
 
-    if (!res.ok) throw new Error();
+    if (!res.ok) {
+      throw new Error();
+    }
     // We don't need the data, so we don't return anything
   } catch {
     throw new Error("Failed updating your order");
