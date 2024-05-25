@@ -5,8 +5,18 @@ const Landing = () => {
     // console.log(navigation);
   return (
     <div>
-    Landing
-    <Link to='/menu'>menu</Link>
+      <div>
+        <h2>The best Pizza the World!</h2>
+        <p>Pizza: It's delicious. It's customizable. It brings people together. Everyone love Pizza!</p>
+        <div>
+          <p>Welcome! Please start by telling us your name:</p>
+          <div>
+            <input type="text" placeholder="Your full name" />
+            <button>Start Order</button>
+          </div>
+        </div>
+      </div>
+      {/* <Link to='/menu'>menu</Link> */}
     </div>
   )
 }
