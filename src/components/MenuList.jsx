@@ -1,12 +1,18 @@
-const MenuList = () => {
+import { formatCurrency } from "../utils/helpers"
+
+const MenuList = ({ id, name, unitPrice, ingredients, soldOut, imageUrl }) => {
   return (
     <li>
-      <img src="" alt="" />
+      <img src={imageUrl} alt={name} />
       <div>
-        <p>name</p>
-        <p>ingredients</p>
+        <p>{name}</p>
+        <p>{ingredients.join(", ")}</p>
         <div>
-          sold out
+        {
+        !soldOut ? 
+          <p>{formatCurrency(unitPrice)}</p>
+        : <p>soldOut</p>
+        }
         </div>
       </div>
     </li>

@@ -18,7 +18,7 @@ const Menu = () => {
         menu.map(item => {
           return (
             // <li key={item.id}>{item.name}</li>
-            <MenuList key={item.id} />
+            <MenuList key={item.id} {...item} />
           )
         })
       }
