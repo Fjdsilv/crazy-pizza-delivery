@@ -11,7 +11,7 @@ const Header = () => {
             placeholder="Type here" 
             />
           <div>
-            UserName
+            John
           </div>
         </nav>
       </div>

@@ -15,7 +15,7 @@ const HomeLayout = () => {
                 { isPageLoading ? <p>Loading...</p> : <Outlet /> }
             </main>
         <div>
-        {false && <CartOverview />}
+        {true && <CartOverview />}
         <Footer />
         </div>
     </div>

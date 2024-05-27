@@ -3,7 +3,7 @@ const API_URL = "https://react-fast-pizza-api.onrender.com/api";
 
 export const getMenu = async () => {
     const res = await fetch(`${API_URL}/menu`);
-    // fetch doesn't treat client error(4xx) and server error(5xx) like error.
+    // fetch doesn't treat client error(4xx) and server error(5xx) as error.
     // fetch won't throw error on 400 errors (e.g. when URL is wrong), so we need to do it manually. 
     if (!res.ok) {
       throw new Error("Failed getting menu");

@@ -1,6 +1,6 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { getMenu } from "../utils/apiRestaurant";
-import SingleItemMenu from "../components/SingleItemMenu";
+import MenuList from "../components/MenuList";
 
 // Each route can define a "loader" function to provide data to the route element before(pre-fetcher) it renders.
 // must return something even "null" otherwise error
@@ -17,10 +17,14 @@ const Menu = () => {
       {
         menu.map(item => {
           return (
-            <li key={item.id}>{item.name}</li>
+            // <li key={item.id}>{item.name}</li>
+            <MenuList key={item.id} />
           )
         })
       }
+      <div>
+      <Link to='/'>Landing Page</Link>
+      </div>
     </ul>
   )
 }

@@ -5,6 +5,7 @@ import {
   Menu,
   Cart,
   Order,
+  SingleOrder,
   Error,
 } from "./pages";
 
@@ -32,12 +33,12 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "/order/new",
+        path: "/order",
         element: <Order />,
       },
       {
         path: "/order/:orderId",
-        element: <Order />,
+        element: <SingleOrder />,
       },
     ]
   }

@@ -16,7 +16,9 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      {/* <Link to='/menu'>menu</Link> */}
+      <div>
+        <Link to='/menu'>menu</Link>
+      </div>
     </div>
   )
 }
