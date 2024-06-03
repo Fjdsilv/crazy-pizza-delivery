@@ -3,8 +3,7 @@ import { useRouteError, useNavigate } from "react-router-dom";
 const Error = () => { 
   const error = useRouteError();
   const navigate = useNavigate();
-  console.log(error.message);
-
+  
   if (error.status === 404) {
     return (
       <div>

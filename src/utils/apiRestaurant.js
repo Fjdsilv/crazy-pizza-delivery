@@ -1,6 +1,6 @@
 const API_URL = "https://react-fast-pizza-api.onrender.com/api";
 
-
+// GET
 export const getMenu = async () => {
     const res = await fetch(`${API_URL}/menu`);
     // fetch doesn't treat client error(4xx) and server error(5xx) as error.
@@ -13,6 +13,7 @@ export const getMenu = async () => {
     return data;
 } 
 
+// GET
 export const getOrder = async (id) => {
     const res = await fetch(`${API_URL}/order/${id}`);
     
@@ -24,6 +25,7 @@ export const getOrder = async (id) => {
     return data;
 }
 
+// POST
 export const createOrder = async (newOrder) => {
   try {
     const res = await fetch(`${API_URL}/order`, {
@@ -45,6 +47,7 @@ export const createOrder = async (newOrder) => {
   }
 }
 
+// PATCH
 export const updateOrder = async (id, updateObj) => {
   try {
     const res = await fetch(`${API_URL}/order/${id}`, {

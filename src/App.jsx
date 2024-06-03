@@ -10,6 +10,7 @@ import {
 } from "./pages";
 
 import { loader as menuLoader } from "./pages/Menu";
+import { loader as singleOrder } from "./pages/SingleOrder";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
-        errorElement: <Error />,
+        // errorElement: <Error />, TO DELETE
       },
       {
         path: "/menu",

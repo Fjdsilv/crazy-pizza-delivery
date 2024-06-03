@@ -7,7 +7,7 @@ const Landing = () => {
     <div>
       <div>
         <h2>The best Pizza the World!</h2>
-        <p>Pizza: It's delicious. It's customizable. It brings people together. Everyone love Pizza!</p>
+        <p>Pizza: It's delicious. It brings people together. Everyone love Pizza!</p>
         <div>
           <p>Welcome! Please start by telling us your name:</p>
           <div>
