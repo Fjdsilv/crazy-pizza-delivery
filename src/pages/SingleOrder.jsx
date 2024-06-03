@@ -1,8 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import { getOrder } from "../utils/apiRestaurant";
 
-export const loader = async (obj) => {
-  console.log(obj)
+export const loader = async ({ params }) => {
+  const id = params.orderId;
+  const order = await getOrder(id)
+  console.log(order)
+
   return null
 }
 

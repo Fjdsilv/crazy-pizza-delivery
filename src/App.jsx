@@ -10,7 +10,7 @@ import {
 } from "./pages";
 
 import { loader as menuLoader } from "./pages/Menu";
-import { loader as singleOrder } from "./pages/SingleOrder";
+import { loader as singleOrderLoader } from "./pages/SingleOrder";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +40,8 @@ const router = createBrowserRouter([
       {
         path: "/order/:orderId",
         element: <SingleOrder />,
+        errorElement: <Error />,
+        loader: singleOrderLoader,
       },
     ]
   }
