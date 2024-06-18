@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Form } from "react-router-dom";
 
 // https://uibakery.io/regex-library/phone-number
@@ -39,6 +40,7 @@ export const action = async ({ request }) => {
 
 
 const CreateOrder = () => {
+  const [withPriority, setWithPriority] = useState(false)
   return (
     <div>
       <h2>Ready to order? Let's go!</h2>
@@ -72,8 +74,13 @@ const CreateOrder = () => {
               type="checkbox"
               name="priority" 
               id="priority"
+              // value={withPriority}
+              // onChange={(e) => setWithPriority(e.target.checked)}
             />
             <label htmlFor="priority">Want to yo give your order priority?</label>
+          </div>
+          <div>
+            <button>order Now</button>
           </div>
       </Form>
     </div>
