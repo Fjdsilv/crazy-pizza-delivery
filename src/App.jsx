@@ -11,6 +11,7 @@ import {
 
 import { loader as menuLoader } from "./pages/Menu";
 import { loader as singleOrderLoader } from "./pages/SingleOrder";
+import { action as createOrderAction } from "./pages/Order";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <Order />,
+        action: createOrderAction,
       },
       {
         path: "/order/:orderId",

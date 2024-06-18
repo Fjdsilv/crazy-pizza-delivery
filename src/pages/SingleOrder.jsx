@@ -10,6 +10,7 @@ export const loader = async ({ params }) => {
 
 const SingleOrder = () => {
   const { id, status, priority, priorityPrice, orderPrice, estimatedDelivery, cart } = useLoaderData();
+  
   return (
     <div>
       <h2>Status</h2>
@@ -18,3 +19,7 @@ const SingleOrder = () => {
   )
 }
 export default SingleOrder
+
+
+// CQE92U
+// IIDSAT
