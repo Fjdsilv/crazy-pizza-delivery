@@ -4,14 +4,14 @@ import {
   Landing,
   Menu,
   Cart,
-  Order,
+  CreateOrder,
   SingleOrder,
   Error,
 } from "./pages";
 
 import { loader as menuLoader } from "./pages/Menu";
 import { loader as singleOrderLoader } from "./pages/SingleOrder";
-import { action as createOrderAction } from "./pages/Order";
+import { action as createOrderAction } from "./pages/CreateOrder";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/order",
-        element: <Order />,
+        element: <CreateOrder />,
         action: createOrderAction,
       },
       {
